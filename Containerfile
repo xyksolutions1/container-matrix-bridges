@@ -5,15 +5,15 @@
 ARG \
     BASE_IMAGE
 
-FROM ${BASE_IMAGE}
+FROM docker.io/xyksolutions1/container-base:latest
 LABEL \
         org.opencontainers.image.title="Matrix Bridges" \
         org.opencontainers.image.description="Containerized bridges to interconnect services via Matrix" \
-        org.opencontainers.image.url="https://hub.docker.com/r/nfrastack/matrix-bridges" \
-        org.opencontainers.image.documentation="https://github.com/nfrastack/container-matrix-bridges/blob/main/README.md" \
-        org.opencontainers.image.source="https://github.com/nfrastack/container-matrix-bridges.git" \
-        org.opencontainers.image.authors="Nfrastack <code@nfrastack.com>" \
-        org.opencontainers.image.vendor="Nfrastack <https://www.nfrastack.com>" \
+        org.opencontainers.image.url="https://hub.docker.com/r/xyksolutions1/matrix-bridges" \
+        org.opencontainers.image.documentation="https://github.com/xyksolutions1/container-matrix-bridges/blob/main/README.md" \
+        org.opencontainers.image.source="https://github.com/xyksolutions1/container-matrix-bridges.git" \
+        org.opencontainers.image.authors="xyksolutions1" \
+        org.opencontainers.image.vendor="xyksolutions1" \
         org.opencontainers.image.licenses="MIT"
 
 ARG \
@@ -41,8 +41,8 @@ COPY README.md /usr/src/container/README.md
 ENV \
     FFMPEG_BINARY=/usr/bin/ffmpeg \
     CONTAINER_ENABLE_SCHEDULING=TRUE \
-    IMAGE_NAME="nfrastack/matrix-bridges" \
-    IMAGE_REPO_URL="https://github.com/nfrastack/conmtainer-matrix-bridges/"
+    IMAGE_NAME="xyksolutions1/matrix-bridges" \
+    IMAGE_REPO_URL="https://github.com/xyksolutions1/conmtainer-matrix-bridges/"
 
 RUN echo "" && \
     MATRIXBRIDGES_BUILD_DEPS_ALPINE=" \
